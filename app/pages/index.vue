@@ -273,8 +273,6 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useHead } from '@vueuse/head'
-import HeroFinanceBg from '@/components/HeroFinanceBg.vue'
 
 useHead({
   title: 'Zenith Blazee | Mutual Fund Distributor',
@@ -460,8 +458,6 @@ const partners = [
   pointer-events: none;
   position: absolute;
 }
-
-/* Animation handled by HeroFinanceBg.vue */
 
 .hero-content {
   padding-bottom: var(--space-xl);
@@ -729,7 +725,6 @@ const partners = [
   line-height: 1.7;
 }
 
-/* Desktop step connector line */
 .step-connector {
   display: none;
 }

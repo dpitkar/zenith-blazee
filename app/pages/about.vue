@@ -126,9 +126,6 @@
 </template>
 
 <script setup>
-import { useHead } from '@vueuse/head'
-import HeroFinanceBg from '@/components/HeroFinanceBg.vue'
-
 useHead({
   title: 'About Us | Zenith Blazee',
   meta: [

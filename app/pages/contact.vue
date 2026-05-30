@@ -78,9 +78,6 @@
 </template>
 
 <script setup>
-import { useHead } from '@vueuse/head'
-import HeroFinanceBg from '@/components/HeroFinanceBg.vue'
-
 useHead({
   title: 'Contact Us | Zenith Blazee',
   meta: [
@@ -91,14 +88,6 @@ useHead({
     }
   ]
 })
-
-const helpItems = [
-  "I want to start investing but don't know where to begin.",
-  "I'm looking to plan for my retirement.",
-  "I want to save for my child's education or future.",
-  "I need help reviewing and improving my existing portfolio.",
-  "I want to understand what insurance coverage I actually need.",
-]
 
 const team = [
   {
@@ -118,7 +107,6 @@ const team = [
     telRaw: '+919833886968'
   }
 ]
-
 </script>
 
 <style scoped>
@@ -166,54 +154,6 @@ const team = [
   font-weight: 300;
   line-height: 1.8;
   max-width: 50ch;
-}
-
-/* ── Help Section ── */
-.help-inner {
-  align-items: start;
-  display: grid;
-  gap: var(--space-xl);
-  grid-template-columns: 1fr;
-}
-
-.help-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-  margin-bottom: var(--space-md);
-}
-
-.help-item {
-  align-items: flex-start;
-  color: var(--color-charcoal);
-  display: flex;
-  font-size: var(--fs-body);
-  gap: 0.75rem;
-  line-height: 1.6;
-}
-
-.help-check {
-  align-items: center;
-  background-color: rgba(201, 168, 76, 0.12);
-  border-radius: 50%;
-  color: var(--color-gold);
-  display: flex;
-  flex-shrink: 0;
-  height: 24px;
-  justify-content: center;
-  margin-top: 0.1rem;
-  width: 24px;
-}
-
-.response-note {
-  align-items: center;
-  background-color: rgba(201, 168, 76, 0.08);
-  border-radius: var(--radius-sm);
-  color: var(--color-charcoal);
-  display: inline-flex;
-  font-size: var(--fs-small);
-  gap: 0.5rem;
-  padding: 0.625rem 1rem;
 }
 
 /* ── Form + Direct Contact layout ── */
@@ -317,152 +257,6 @@ const team = [
   display: block;
   min-height: 943px;
   width: 100%;
-}
-
-.form-header {
-  margin-bottom: var(--space-lg);
-}
-
-.contact-form {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-grey-light);
-  border-radius: var(--radius-lg);
-  max-width: 800px;
-  padding: var(--space-lg);
-}
-
-.form-row {
-  display: grid;
-  gap: var(--space-md);
-  grid-template-columns: 1fr;
-  margin-bottom: var(--space-md);
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-  margin-bottom: var(--space-md);
-}
-
-.form-field:last-child {
-  margin-bottom: 0;
-}
-
-.form-label {
-  color: var(--color-charcoal);
-  font-size: var(--fs-small);
-  font-weight: 600;
-  letter-spacing: 0.03em;
-}
-
-.form-label span {
-  color: var(--color-gold);
-}
-
-.form-input {
-  background-color: var(--color-cream);
-  border: 1.5px solid var(--color-grey-light);
-  border-radius: var(--radius-sm);
-  color: var(--color-charcoal);
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-  min-height: 48px;
-  outline: none;
-  padding: 0.75rem 1rem;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-  width: 100%;
-}
-
-.form-input:focus {
-  border-color: var(--color-gold);
-  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12);
-}
-
-.form-input--error {
-  border-color: #e05252;
-}
-
-.form-select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-position: right 0.75rem center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  padding-right: 2.5rem;
-}
-
-.form-textarea {
-  min-height: 130px;
-  resize: vertical;
-}
-
-.form-radio-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
-}
-
-.form-radio-label {
-  align-items: center;
-  background-color: var(--color-cream);
-  border: 1.5px solid var(--color-grey-light);
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.4rem 1rem;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
-}
-
-.form-radio-label:has(.form-radio:checked) {
-  background-color: rgba(201, 168, 76, 0.1);
-  border-color: var(--color-gold);
-}
-
-.form-radio {
-  accent-color: var(--color-gold);
-  cursor: pointer;
-}
-
-.form-error {
-  color: #e05252;
-  font-size: var(--fs-small);
-}
-
-.form-footer {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-md);
-  justify-content: space-between;
-  margin-top: var(--space-lg);
-  padding-top: var(--space-md);
-  border-top: 1px solid var(--color-grey-light);
-}
-
-.form-disclaimer {
-  color: var(--color-grey-medium);
-  font-size: var(--fs-small);
-  max-width: 40ch;
-}
-
-.btn:disabled {
-  background-color: var(--color-grey-medium);
-  border-color: var(--color-grey-medium);
-  cursor: not-allowed;
-  transform: none;
-}
-
-.form-success {
-  background-color: rgba(201, 168, 76, 0.1);
-  border: 1px solid rgba(201, 168, 76, 0.3);
-  border-radius: var(--radius-sm);
-  color: var(--color-navy-deep);
-  font-size: var(--fs-small);
-  margin-top: var(--space-md);
-  padding: var(--space-sm) var(--space-md);
 }
 
 /* ── Responsive ── */
