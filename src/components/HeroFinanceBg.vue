@@ -88,10 +88,10 @@
 </template>
 
 <script setup>
-import { getCurrentInstance } from 'vue'
+import { ref, onMounted, getCurrentInstance } from 'vue'
 
 // Unique ID per instance so SVG gradient IDs don't collide across pages
-const uid = getCurrentInstance()?.uid ?? Math.random().toString(36).slice(2)
+const uid = getCurrentInstance()?.uid ?? 'hero'
 
 const symbolPool = [
   'rupee', 'rupee', 'percent', 'percent',
@@ -99,17 +99,22 @@ const symbolPool = [
   'percent', 'arrow', 'bars', 'rupee'
 ]
 
-const symbols = Array.from({ length: 18 }, (_, i) => ({
-  id: i,
-  type: symbolPool[i % symbolPool.length],
-  style: {
-    left:              `${4 + Math.round(Math.random() * 90)}%`,
-    fontSize:          `${11 + Math.round(Math.random() * 11)}px`,
-    animationDuration: `${20 + Math.round(Math.random() * 18)}s`,
-    animationDelay:    `-${Math.round(Math.random() * 28)}s`,
-    opacity:           +(0.18 + Math.random() * 0.22).toFixed(2)
-  }
-}))
+// Initialised empty — populated on client only to avoid SSR hydration mismatch
+const symbols = ref([])
+
+onMounted(() => {
+  symbols.value = Array.from({ length: 18 }, (_, i) => ({
+    id: i,
+    type: symbolPool[i % symbolPool.length],
+    style: {
+      left:              `${4 + Math.round(Math.random() * 90)}%`,
+      fontSize:          `${11 + Math.round(Math.random() * 11)}px`,
+      animationDuration: `${20 + Math.round(Math.random() * 18)}s`,
+      animationDelay:    `-${Math.round(Math.random() * 28)}s`,
+      opacity:           +(0.18 + Math.random() * 0.22).toFixed(2)
+    }
+  }))
+})
 </script>
 
 <style scoped>

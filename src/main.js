@@ -1,20 +1,42 @@
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
 import { createHead } from '@vueuse/head'
-import AOS from 'aos'
 import App from './App.vue'
-import router from './router'
+import { routes } from './router'
 import './assets/css/main.css'
 
-AOS.init({
-  duration: 700,
-  easing: 'ease-out-cubic',
-  once: true,
-  offset: 60
-})
+export const createApp = ViteSSG(
+  App,
+  {
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+      if (savedPosition) return savedPosition
+      return { top: 0, behavior: 'smooth' }
+    }
+  },
+  ({ app, router, isClient }) => {
+    // Head management (works both SSG + client)
+    const head = createHead()
+    app.use(head)
 
-const app = createApp(App)
-const head = createHead()
+    // Update <title> and meta description on client navigation
+    if (isClient) {
+      router.afterEach((to) => {
+        document.title = to.meta?.title || 'Zenith Blazee'
+        const descTag = document.querySelector('meta[name="description"]')
+        if (descTag && to.meta?.description) {
+          descTag.setAttribute('content', to.meta.description)
+        }
+      })
 
-app.use(router)
-app.use(head)
-app.mount('#app')
+      // AOS uses window/document — client only
+      import('aos').then(({ default: AOS }) => {
+        AOS.init({
+          duration: 700,
+          easing: 'ease-out-cubic',
+          once: true,
+          offset: 60
+        })
+      })
+    }
+  }
+)
