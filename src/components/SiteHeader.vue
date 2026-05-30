@@ -69,8 +69,8 @@
       </nav>
 
       <div class="nav-overlay-footer">
-        <a href="mailto:annkkur@zeniithhire.com" class="nav-overlay-contact">annkkur@zeniithhire.com</a>
-        <a href="mailto:dhaval@zeniithhire.com" class="nav-overlay-contact">dhaval@zeniithhire.com</a>
+        <a href="mailto:annkkur@zenithblazee.com" class="nav-overlay-contact">annkkur@zenithblazee.com</a>
+        <a href="mailto:dhaval@zenithblazee.com" class="nav-overlay-contact">dhaval@zenithblazee.com</a>
       </div>
     </div>
   </header>

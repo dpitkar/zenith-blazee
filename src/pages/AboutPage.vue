@@ -164,7 +164,7 @@ const profiles = [
     initials: 'AB',
     role: 'Partner',
     avatarBg: 'rgba(201,168,76,0.12)',
-    email: 'annkkur@zeniithhire.com',
+    email: 'annkkur@zenithblazee.com',
     phone: '+91 93247 75968',
     telRaw: '+919324775968',
     bio: [
@@ -179,7 +179,7 @@ const profiles = [
     initials: 'DP',
     role: 'Partner, CA',
     avatarBg: 'rgba(27,42,74,0.07)',
-    email: 'dhaval@zeniithhire.com',
+    email: 'dhaval@zenithblazee.com',
     phone: '+91 98338 86968',
     telRaw: '+919833886968',
     bio: [

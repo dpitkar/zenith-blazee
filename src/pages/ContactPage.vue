@@ -20,36 +20,36 @@
   </section>
 
   <!-- ==============================
-       HOW WE CAN HELP
+       FORM + DIRECT CONTACT
        ============================== -->
-  <section class="section section--cream" aria-labelledby="help-heading">
-    <div class="container help-inner">
-      <div data-aos="fade-right">
-        <span class="section-label">How We Can Help</span>
-        <h2 class="section-heading" id="help-heading">What can we talk about?</h2>
-        <p class="section-sub" style="color: var(--color-grey-dark); margin-bottom: var(--space-lg)">
-          We typically hear from people with questions like these. If yours is different, reach out anyway — we're happy to listen.
+  <section class="section section--cream form-section">
+    <div class="container form-contact-grid">
+
+      <!-- Left: Google Form -->
+      <div class="form-col" data-aos="fade-right">
+        <span class="section-label">Send Us a Message</span>
+        <h2 class="section-heading" id="form-heading">Tell us about your goals</h2>
+        <p class="section-sub" style="color: var(--color-grey-dark); margin-bottom: var(--space-md)">
+          Fill in a few details and we'll get back to you shortly.
         </p>
-        <ul class="help-list">
-          <li v-for="item in helpItems" :key="item" class="help-item">
-            <span class="help-check" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-            </span>
-            {{ item }}
-          </li>
-        </ul>
-        <p class="response-note">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
-          We respond within <strong>1–2 working days.</strong>
-        </p>
+        <div class="form-embed-wrapper">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScJrQ7DS-HkfAxZHzHcxswY7sNf3V2UOmI31nh4wkHSChFMUw/viewform?embedded=true"
+            width="100%"
+            height="943"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            loading="lazy"
+            title="Contact Zenith Blazee"
+          >Loading…</iframe>
+        </div>
       </div>
 
-      <div class="direct-contact" data-aos="fade-left" data-aos-delay="100">
-        <p class="direct-heading">Prefer to reach us directly?</p>
+      <!-- Right: Direct contact -->
+      <div class="direct-col" data-aos="fade-left" data-aos-delay="100">
+        <span class="section-label">Prefer to Reach Us Directly?</span>
+        <h2 class="section-heading">Get in touch with our partners</h2>
         <div class="contact-cards">
           <div v-for="person in team" :key="person.name" class="contact-card">
             <div class="contact-avatar">{{ person.initials }}</div>
@@ -72,20 +72,9 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
-
-  <!-- ==============================
-       CONTACT FORM
-       Google Form embed goes here once the URL is confirmed.
-       Replace the placeholder below with:
-       <iframe
-         src="YOUR_GOOGLE_FORM_EMBED_URL"
-         width="100%" height="820" frameborder="0"
-         marginheight="0" marginwidth="0" loading="lazy"
-         title="Contact Zenith Blazee"
-       >Loading…</iframe>
-       ============================== -->
 </template>
 
 <script setup>
@@ -116,7 +105,7 @@ const team = [
     name: 'Annkkur Bandhu',
     initials: 'AB',
     role: 'Partner',
-    email: 'annkkur@zeniithhire.com',
+    email: 'annkkur@zenithblazee.com',
     phone: '+91 93247 75968',
     telRaw: '+919324775968'
   },
@@ -124,7 +113,7 @@ const team = [
     name: 'Dhaval Pitkar',
     initials: 'DP',
     role: 'Partner, CA',
-    email: 'dhaval@zeniithhire.com',
+    email: 'dhaval@zenithblazee.com',
     phone: '+91 98338 86968',
     telRaw: '+919833886968'
   }
@@ -227,18 +216,25 @@ const team = [
   padding: 0.625rem 1rem;
 }
 
-/* ── Direct Contact ── */
-.direct-heading {
-  color: var(--color-navy-deep);
-  font-family: var(--font-heading);
-  font-size: var(--fs-h4);
-  margin-bottom: var(--space-md);
+/* ── Form + Direct Contact layout ── */
+.form-contact-grid {
+  align-items: start;
+  display: grid;
+  gap: var(--space-xl);
+  grid-template-columns: 1fr;
 }
 
+.direct-col {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-lg));
+}
+
+/* ── Direct Contact ── */
 .contact-cards {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
 }
 
 .contact-card {
@@ -302,9 +298,25 @@ const team = [
   color: var(--color-gold);
 }
 
-/* ── Form ── */
-.form-section {
-  padding-block: var(--space-2xl);
+/* ── Form col text alignment ── */
+.form-col .section-label,
+.form-col .section-heading,
+.form-col .section-sub {
+  padding-left: 1.5rem;
+}
+
+/* ── Form embed ── */
+.form-embed-wrapper {
+  min-height: 943px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.form-embed-wrapper iframe {
+  border: none;
+  display: block;
+  min-height: 943px;
+  width: 100%;
 }
 
 .form-header {
@@ -454,15 +466,9 @@ const team = [
 }
 
 /* ── Responsive ── */
-@media (min-width: 600px) {
-  .form-row {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .help-inner {
-    grid-template-columns: 1fr 1fr;
+@media (min-width: 900px) {
+  .form-contact-grid {
+    grid-template-columns: 1.8fr 1fr;
   }
 }
 </style>

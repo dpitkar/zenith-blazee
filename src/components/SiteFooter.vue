@@ -30,12 +30,12 @@
           <div class="footer-partner">
             <p class="partner-name">Annkkur Bandhu</p>
             <p class="partner-role">Partner</p>
-            <a href="mailto:annkkur@zeniithhire.com" class="contact-link">
+            <a href="mailto:annkkur@zenithblazee.com" class="contact-link">
               <svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
                 <path d="m22 7-10 7L2 7"/>
               </svg>
-              annkkur@zeniithhire.com
+              annkkur@zenithblazee.com
             </a>
             <a href="tel:+919324775968" class="contact-link">
               <svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -47,12 +47,12 @@
           <div class="footer-partner">
             <p class="partner-name">Dhaval Pitkar</p>
             <p class="partner-role">Partner</p>
-            <a href="mailto:dhaval@zeniithhire.com" class="contact-link">
+            <a href="mailto:dhaval@zenithblazee.com" class="contact-link">
               <svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
                 <path d="m22 7-10 7L2 7"/>
               </svg>
-              dhaval@zeniithhire.com
+              dhaval@zenithblazee.com
             </a>
             <a href="tel:+919833886968" class="contact-link">
               <svg class="contact-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
