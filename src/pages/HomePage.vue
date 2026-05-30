@@ -152,13 +152,6 @@
         <p class="insurance-sub">
           Alongside mutual fund planning, we help you evaluate the right life and health insurance coverage — because a strong financial plan begins with the right protection in place.
         </p>
-        <div class="insurance-note" role="note">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          We offer insurance advisory only — helping you understand your needs and make informed decisions. We do not sell specific products or earn insurance commissions.
-        </div>
-        <RouterLink to="/contact" class="btn btn--primary" style="margin-top: var(--space-md)">
-          Talk About Protection
-        </RouterLink>
       </div>
 
       <div class="insurance-pillars" data-aos="fade-left" data-aos-delay="100">
