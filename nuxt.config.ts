@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-30',
+  compatibilityDate: '2026-06-14',
 
   modules: ['@nuxtjs/google-fonts'],
 
