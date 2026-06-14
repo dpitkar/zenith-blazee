@@ -22,7 +22,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1.0',
       htmlAttrs: { lang: 'en' },
-      title: 'Zenith Blazee | Mutual Fund Distributor',
+      title: 'Zenith Blazee | Mutual Fund & Insurance Advisory',
       meta: [
         { name: 'theme-color', content: '#0D1B2A' }
       ],
